@@ -1,4 +1,4 @@
-# Crossmatching and Spectral Analysis
+# Spectral-Index Based Pulsar Finder 
 
 This repository contains a Python script for crossmatching radio sources and performing spectral analysis using data from the TGSS (TIFR GMRT Sky Survey) and NVSS (NRAO VLA Sky Survey) catalogs. The script calculates spectral indices for matched sources and identifies potential pulsar candidates. 
 
