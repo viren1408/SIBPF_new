@@ -91,8 +91,8 @@ I acknowledge the developers of PyBDSF (Python Blob Detection and Source Finder)
 I acknowledge the use of various other libraries and tools that have contributed to the success of this project.
 
 ## Citation
+If you use this code or the results obtained from it in your research or work , kindly consider citing relevent publications or resources associated with the TGSS catalog , PyBDSF and NVSS catalog including any other relevent tool that have contributed to your analysis
 
-If you use this code or the results obtained from it in your research or work, kindly consider citing relevant publications or resources associated with the TGSS Catalog, PyBDSF, and any other relevant tools that have contributed to the success of your analysis.
 ---
 
 # Note 
