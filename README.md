@@ -8,6 +8,16 @@ To run the script, make sure you have the following prerequisites installed:
 
 - Python 
 - Required Python packages: pandas, astropy, numpy, matplotlib, scipy, psrqpy, astroquery, bdsf
+  
+## Download Data
+
+Before running the script, you need to download the following data files:
+
+1. Download TGSS Catalog (TGSSADR1_7sigma_catalog.tsv):
+   [Download TGSS Catalog](http://tgssadr.strw.leidenuniv.nl/dokuwiki/doku.php?id=tgssadr)
+
+2. Download Spectral Index Catalog (spidxcat_v1.1b.fits):
+   [Download Spectral Index Catalog](http://svo2.cab.inta-csic.es/vocats/tools/spidxcat/)
 
 ## Usage
 
