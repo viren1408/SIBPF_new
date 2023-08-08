@@ -1,0 +1,12 @@
+{
+  "dir": "/home/viren/work/DATA/Spectral_Analysis",
+  "region": "G025.0-5.0",
+  "image": "/home/viren/work/DATA/Spectral_Analysis/G025.0-5.0/G025.0-5.0.FITS",
+  "spidx": "/home/viren/work/DATA/Spectral_Analysis/G031.0-5.0/spidxcat_v1.1b.fits",
+  "tgss": "/home/viren/work/DATA/Spectral_Analysis/G031.0-5.0/TGSSADR1_7sigma_catalog.tsv",
+  "show_matches": true,
+  "get_spectral_index": true,
+  "get_candidates": true,
+  "get_pulsars": true
+}
+
