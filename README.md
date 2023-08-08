@@ -44,8 +44,8 @@ Before running the script, you need to download the following data files:
      "get_pulsars": true
    }
    ```
-    please note that in the current version save the image file as "region.fits" eg . "G033.0-5.0.FITS" and save it in "/path/to/data/region" or "dir/region" this has been done for my personal         
-    bookeeping    and will be edited out soon , The output files will be saved in the same "dir/region" with proper names as given below. 
+    please note that in the current version save the image file as "region.fits" eg. "G033.0-5.0.FITS" and save it in "/path/to/data/region" or "dir/region" this has been done for my personal         
+    bookeeping  and will be edited out soon , The output files will be saved in the same "dir/region" with proper names as given below. 
   
 3. Execute the script using the command:
 
@@ -59,7 +59,7 @@ The script provides the following functionalities:
 
 ### Crossmatching
 
-- Matches sources within a specified circular region in the provided FITS image (`image.fits`) using the TGSS and NVSS catalogs.
+- Matches the sources within a specified circular region in the provided FITS image (`image.fits`) obtained using AIPS or CASA with the TGSS and NVSS catalogs.
 - Generates plots showing matched sources on an RA-Dec plot, with marker sizes proportional to resolution.
 
 ### Spectral Analysis
@@ -78,7 +78,21 @@ The script generates the following outputs:
 - Pulsar candidates list in CSV format (`Pulsar_candidates_your_region.csv`).
 
 
+# Acknowledgments
 
+## TGSS Catalog
+
+I acknowledge the use of data from the TGSS (TIFR GMRT Sky Survey) catalog in this project. The TGSS survey has provided invaluable radio astronomy data that has contributed to the analysis. For more information about the TGSS catalog and data access.
+
+## PyBDSF
+
+I acknowledge the developers of PyBDSF (Python Blob Detection and Source Finder), a powerful tool that has been instrumental in our source extraction and analysis. PyBDSF's functionality and capabilities have greatly facilitated our radio astronomy research. For more information about PyBDSF and its features, please refer to their GitHub repository: [PyBDSF GitHub Repository](https://github.com/lofar-astron/PyBDSF).
+
+I acknowledge the use of various other libraries and tools that have contributed to the success of this project.
+
+## Citation
+
+If you use this code or the results obtained from it in your research or work, kindly consider citing relevant publications or resources associated with the TGSS Catalog, PyBDSF, and any other relevant tools that have contributed to the success of your analysis.
 ---
 
 # Note 
