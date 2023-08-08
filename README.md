@@ -26,7 +26,7 @@ Before running the script, you need to download the following data files:
 
    ```
    git clone https://github.com/viren1408/SIBPF_new.git
-   cd SIBPF_new
+   
    ```
 
 2. Prepare a configuration JSON file (e.g., `config.json`) with the following structure:
