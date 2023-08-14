@@ -200,7 +200,8 @@ def Crossmatching(dir,region,file_path_image,file_path_spidx,file_path_TGSS,show
     ax.scatter(observed_sources_main[' RA'], observed_sources_main[' DEC'], color="black", label='Observed_sources', s=marker_size_gmrt,alpha=0.4)
 
     #ax.scatter(spix['RA'], spix['DEC'], color="blue",label='SPIX',s=marker_size_gmrt,alpha=1)
-    ax.scatter(observed_sources[' RA'], observed_sources[' DEC'], color="none", edgecolor="red", label='Matched',s=marker_size_gmrt)
+    ax.scatter(matched_sources[' RA'], matched_sources[' DEC'], color="none", edgecolor="red", label='Matched_sources',s=marker_size_gmrt)
+    plt.gca().invert_xaxis() #orientation according to ds9 and other sofwares 
     ax.set_xlabel('RA (deg)')
     ax.set_ylabel('Dec (deg)')
     ax.set_title('Matched sources_' + str(region))
