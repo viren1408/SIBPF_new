@@ -66,8 +66,6 @@ def Crossmatching(dir,region,file_path_image,file_path_spidx,file_path_TGSS,show
   observed_sources = pd.DataFrame(data)
   observed_sources.set_index("# Source_id", inplace = True)
 
-  #Creating required dataframae for PyBDSF sources with only required columns
-  #observed_sources = observed_sources.iloc[:,[0,1,3,5,6]]
 
   #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#
   #extract the header information from the Pybdsf fits file.
