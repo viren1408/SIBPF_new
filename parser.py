@@ -1,6 +1,7 @@
 import argparse
 import json
-from crossmatching_function import Crossmatching
+from crossmatching_function import Crossmatching #use this for the previous version
+from SIBPF import sibpf #new version
 # Import the given subroutine here
 # Make sure you have the necessary imports and functions defined in the 'Trial_onlyspidx' submodule
 
@@ -18,7 +19,7 @@ with open(args.config, 'r') as config_file:
     config = json.load(config_file)
 
 # Call the Crossmatching function with the provided arguments from the config
-spectral_index, pulsar_candidates = Crossmatching(
+spectral_index, pulsar_candidates = sibpf(
     dir=config['dir'],
     region=config['region'],
     file_path_image=config['image'],
