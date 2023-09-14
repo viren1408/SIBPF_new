@@ -1,16 +1,14 @@
-from os import error
-from turtle import color
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Read the pulsar candidates DataFrames
+# Read the pulsar candidates  This is a dummy data . This step will also be generalized for multiple observation I am still figuring out how to directly script pybdsf in this 
 candidates_day_1 = pd.read_csv('Pulsar_candidates_G033.0-5.0.csv')
 candidates_day_2 = pd.read_csv('Pulsar_candidates_G033.0-5.0 _1.csv')
 candidates_day_3 = pd.read_csv('Pulsar_candidates_G033.0-5.0 _2.csv')
 candidates_day_4 = pd.read_csv('Pulsar_candidates_G033.0-5.0 _3.csv')
 
-# Merge the DataFrames based on 'Xposn' and 'Yposn' columns
+# Merge the DataFrames based on 'Xposn' and 'Yposn' columns 
 merged_df = candidates_day_1.merge(candidates_day_2, on=[' Xposn', ' Yposn'], suffixes=('_day1', '_day2'))
 merged_df = merged_df.merge(candidates_day_3, on=[' Xposn', ' Yposn'])
 merged_df = merged_df.merge(candidates_day_4, on=[' Xposn', ' Yposn'], suffixes=('_day3', '_day4'))
@@ -20,7 +18,7 @@ flux_values = []
 error_values = []
 
 # Loop through candidates
-days = [1,2,3,4]
+days = [1,2,3,4] #This is a dummy time axes and will be adjusted according to our observation , will of course be generalized once data is available 
 for i in range(len(merged_df)):
     # Extract flux and error values for each day
     flux = [merged_df[ ' Total_flux_day1'][i],merged_df[ ' Total_flux_day2'][i],merged_df[ ' Total_flux_day3'][i],merged_df[ ' Total_flux_day4'][i]] 
