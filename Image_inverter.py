@@ -67,6 +67,8 @@ print(data_inverted)
 Inverted_fraction = len(data_inverted)/len(data)
 
 print(f"False detection fraction: {Inverted_fraction}")
+
+
 # Close both FITS files
 hdulist.close()
 new_hdulist.close()
