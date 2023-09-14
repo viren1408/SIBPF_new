@@ -51,6 +51,4 @@ for i in range(len(merged_df)):
     plt.xlabel('Days')
     plt.ylabel('Flux(Jy)')
     plt.show()
-# Now you have lists containing the weighted mean (flux_values) and weighted standard deviation (error_values)
-# for each candidate, as well as the chi-squared and reduced chi-squared values for each candidate.
 # You can further analyze or plot these values as needed.
