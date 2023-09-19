@@ -6,7 +6,7 @@ from astropy.wcs import WCS
 from astropy.io import fits
 import bdsf
 import pandas as pd
-# Replace 'your_file.fits' with the actual file path to your FITS file
+
 region = 'G024.0-5.6'
 dir = '/home/viren/work/DATA/inverter'
 image_file = str(dir)+'/'+str(region)+'.FITS'
