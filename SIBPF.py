@@ -15,7 +15,7 @@ from astropy import units as u
 from psrqpy import QueryATNF
 from astropy.table import Table
 
-def Crossmatching(dir,region,file_path_image,file_path_spidx,file_path_TGSS,show_matches =True,get_spectral_index =True,get_candidates=True,get_pulsars =True ):
+def sibpf(dir,region,file_path_image,file_path_spidx,file_path_TGSS,show_matches =True,get_spectral_index =True,get_candidates=True,get_pulsars =True ):
 
 
   # Open the FITS file and get the header
@@ -59,12 +59,12 @@ def Crossmatching(dir,region,file_path_image,file_path_spidx,file_path_TGSS,show
   input_image = (file_path_image)
   save_file = str(dir)+'/'+str(region)+'/'+str(region)+'.sav' #create .sav file
   img = bdsf.process_image(save_file, filename=input_image, quiet=True)
-  img.write_catalog(format='csv', catalog_type='srl',clobber = True)
-  img.export_image(img_format = 'fits',img_type = 'gaus_model',clobber = True)
-  data = pd.read_csv(str(dir)+'/'+str(region)+'/'+str(region)+'.pybdsm.srl',index_col = None,skiprows=5) #change 1
+  img.write_catalog(outfile = str(dir)+'/'+str(region)+'/'+str(region)+'.pybdsm.gaul' ,format='csv', catalog_type='gaul',clobber = True)
+  img.export_image(outfile = str(dir)+'/'+str(region)+'/'+str(region)+'.pybdsm_gaus_model.fits',img_format = 'fits',img_type = 'gaus_model',clobber = True,) #change 1 (pybdsf source file location)
+  data = pd.read_csv(str(dir)+'/'+str(region)+'/'+str(region)+'.pybdsm.gaul',index_col = None,skiprows=5) #change 1
   observed_sources_main = pd.DataFrame(data)
   observed_sources = pd.DataFrame(data)
-  observed_sources.set_index("# Source_id", inplace = True)
+  observed_sources.set_index("# Gaus_id", inplace = True)
 
 
   #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!#
