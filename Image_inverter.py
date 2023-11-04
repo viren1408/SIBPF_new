@@ -31,9 +31,10 @@ new_header = hdulist[0].header.copy()
 new_hdulist = fits.HDUList([fits.PrimaryHDU(inverted_image_data, header=new_header)])
 
 # Save the new FITS file
-new_hdulist.writeto(str(dir)+'/'+str(region)+'_inverted_image.FITS', overwrite=True)
+new_hdulist.writeto(str(dir)+'/'+str(region)+'_inverted_image.FITS', overwrite=True) #Please note that names will be overwritten!!
 
 #Pybdsf block to get the artifact locations 
+
 # Specify the file path and name
 file_path = str(dir)+'/'+str(region)+'_inverted_image.sav' #create sav file inverted
 file_path_1 = str(dir)+'/'+str(region)+'.sav' #create sav file
@@ -49,8 +50,8 @@ save_file_1 = str(dir)+'/'+str(region)+'.sav' #sav file path original
 
 img = bdsf.process_image(save_file, filename=input_image, quiet=True) #inverted
 img_1 = bdsf.process_image(save_file_1, filename=input_image_1, quiet=True) #original
-
-img.write_catalog(format='csv', catalog_type='gaul',clobber = True) #inverted
+ 
+img.write_catalog(format='csv', catalog_type='gaul',clobber = True) #inverted #select suitable pybdsf modes to get relebant columns 
 img_1.write_catalog(format='csv', catalog_type='gaul',clobber = True) #original
 
 img.export_image(img_format = 'fits',img_type = 'gaus_model',clobber = True) #inverted
