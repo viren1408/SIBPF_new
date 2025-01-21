@@ -22,14 +22,7 @@ Before running the script, you need to download the following data files:
 
 ## Usage
 
-1. Clone this repository to your local machine:
-
-   ```
-   git clone https://github.com/viren1408/SIBPF_new.git
-   
-   ```
-
-2. Prepare a configuration JSON file (e.g., `config.json`) with the following structure:
+1. Prepare a configuration JSON file (e.g., `config.json`) with the following structure:
 
    ```json
    {
@@ -44,13 +37,13 @@ Before running the script, you need to download the following data files:
      "get_pulsars": true
    }
    ```
-    please note that in the current version save the image file as "region.fits" eg. "G033.0-5.0.FITS" and save it in "/path/to/data/region" or "dir/region" this has been done for my personal         
-    bookeeping  and will be edited out soon , The output files will be saved in the same "dir/region" with proper names as given below. 
+    please note that in the current version save the image file as "{region}.fits" eg. "G033.0-5.0.FITS" and save it in "/path/to/data/region" or "dir/region" This has been done for my personal         
+    bookkeeping  and will be edited out soon, The output files will be saved in the same "dir/region" with proper names as given below. 
   
 3. Execute the script using the command:
 
    ```
-   python parser.py --config config.json
+   python sibpf.py --c config.json
    ```
 
 ## Functionality
@@ -68,7 +61,7 @@ The script provides the following functionalities:
 - Produces individual plots of spectral index analysis for each matched source, along with a summary histogram of spectral indices.
 - Identifies potential pulsar candidates based on a spectral index threshold (default: -0.9).
 
-### Image Inverter 
+### Image Inverter(Experimental) 
 
 - The Image inverter code is included which allows the user to find artifacts that may have been detected by pybdsf as true sources
 - The code creates an inverted image and then runs pybdsf on the image to locate any strong artifact usually around strong sources.
@@ -81,13 +74,14 @@ The script provides the following functionalities:
 
 The script generates the following outputs:
 
-- Matched sources information in CSV format (`Matched_sources_your_region.csv`).
-- Individual spectral index analysis plots for each source (`spectral_index_plot_i.png`).
+- Matched sources information in CSV format (`Matched_sources_{your_region}.csv`).
+- Individual spectral index analysis plots for each source (`spectral_index_plot_{i}.png`).
 - Summary plots of spectral index distribution and SPIDX in the image field (`spectral_index_hist.png` and `spectral_index_hist_spidx.png`).
-- Pulsar candidates list in CSV format (`Pulsar_candidates_your_region.csv`).
+- Pulsar candidates list in CSV format (`Pulsar_candidates_{your_region}.csv`).
 
 
 # Acknowledgments
+This code was developed as part of my Master's project. I thank Dr. Mayuresh Surnis for his invaluable insights and guidance during the development process. I also thank him for generously sharing data from the 24_051 GMRT cycle, which greatly contributed to this work. 
 
 ## TGSS Catalog
 
